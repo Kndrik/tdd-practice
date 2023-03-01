@@ -8,8 +8,3 @@ test('capitalize, all lower', () => {
 test('capitalize, some lower', () => {
     expect(capitalize('CounTry').toBe('COUNTRY'));
 });
-
-// REVERSESTRING TESTS
-test('reverse string', () => {
-    expect(capitalize('hello').toBe('olleh'));
-});
