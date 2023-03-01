@@ -26,10 +26,35 @@ export const calculator = (() => {
     return { add, substract, divide, multiply }
 })();
 
-export function caesarCipher(input, factor) {
-
+export function getShiftedAlphabet(factor) {
+    const alphabet = ('abcdefghijklmnopqrstuvwxyz').split('');
+    const offsetAlphabet = new Array(26);
+    for (let i = 0; i < alphabet.length; i++) {
+        offsetAlphabet[i] = alphabet[mod(i + factor, 26)];
+    }
+    return offsetAlphabet;
 }
+
+export function caesarCipher(input, factor) {
+    const alphabet = ('abcdefghijklmnopqrstuvwxyz').split('');
+    const shiftedAlphabet = getShiftedAlphabet(factor);
+
+    let crypted = '';
+    input.split('').forEach(element => {
+        const index = alphabet.indexOf(element);
+        crypted += shiftedAlphabet[index];
+    });
+
+    return crypted;
+}
+
+
+function mod(n, m) {
+    return ((n % m) + m) % m;
+  }
 
 export function analyzeArray(input) {
 
 }
+
+console.log(caesarCipher('sad', 5));
