@@ -1,5 +1,5 @@
 export function capitalize(input) {
-
+    return input.toUpperCase();
 }
 
 export function reverseString(input) {

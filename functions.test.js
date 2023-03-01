@@ -2,9 +2,9 @@ import { capitalize, reverseString, calculator, caesarCipher, analyzeArray } fro
 
 // CAPITALIZE TESTS
 test('capitalize, all lower', () => {
-    expect(capitalize('hello').toBe('HELLO'));
+    expect(capitalize('hello')).toBe('HELLO');
 });
 
 test('capitalize, some lower', () => {
-    expect(capitalize('CounTry').toBe('COUNTRY'));
+    expect(capitalize('CounTry')).toBe('COUNTRY');
 });
