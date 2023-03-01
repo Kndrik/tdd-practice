@@ -30,3 +30,12 @@ test('calculator: divide', () => {
 test('calculator: multiply', () => {
     expect(calculator.multiply(3, 7)).toBe(21);
 });
+
+// caesar Cipher tests
+test('caesar cipher', () => {
+    expect(caesarCipher('hello', 1)).toBe('ifmmp');
+})
+
+test('caesar cipher', () => {
+    expect(caesarCipher('young', 5)).toBe('dtzsl');
+});
