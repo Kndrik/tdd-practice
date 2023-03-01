@@ -54,7 +54,15 @@ function mod(n, m) {
   }
 
 export function analyzeArray(input) {
+    return {
+        average: input.reduce((accumulator, currentVal) => accumulator + currentVal, 0)/input.length,
 
+        min: Math.min(... input),
+
+        max: Math.max(... input),
+
+        length: input.length
+    }
 }
 
 console.log(caesarCipher('sad', 5));
